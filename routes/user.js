@@ -4,7 +4,7 @@ module.exports = (app) => {
   const Controller = require("../controllers/userController.js");
   const router = require("express").Router();
 
-  router.get("/", checkToken, Controller.getAll);
+  router.get("/", Controller.getAll);
 
   app.use("/api/user", router);
 };
