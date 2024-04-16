@@ -4,7 +4,12 @@
   "description": "API pengiriman IUJP dan Laporan Investasi",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:dropAll": "sequelize db:migrate:undo:all",
+    "migrate:refresh": "sequelize db:migrate:undo:all && sequelize db:migrate",
+    "seed:all": "sequelize db:seed:all",
+    "migrate:seed": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
